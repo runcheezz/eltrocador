@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #fafaf9;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+::selection {
+  background-color: #d96e35;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #c75828;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a64421;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(28, 25, 23, 0.3) 0%,
+    rgba(28, 25, 23, 0.5) 50%,
+    rgba(28, 25, 23, 0.85) 100%
+  );
+}
+
+.text-shadow {
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.booking-input {
+  width: 100%;
+  border: 1px solid #57534e;
+  border-radius: 0.75rem;
+  background: #292524;
+  padding: 0.75rem 1rem;
+  color: #f5f5f4;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.booking-input::placeholder {
+  color: #a8a29e;
+}
+
+.booking-input:focus {
+  border-color: #e58a4f;
+  box-shadow: 0 0 0 3px rgba(229, 138, 79, 0.18);
+}
